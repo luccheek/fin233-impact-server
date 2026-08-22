@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: fin233-impact
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python impact_server.py --host 0.0.0.0 --port $PORT
